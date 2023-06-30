@@ -1,5 +1,5 @@
 data "aws_route53_zone" "main" {
-  name = "your-new-domain.com"
+  name = "goodstuff.cloud"
 }
 
 resource "aws_route53_record" "www" {

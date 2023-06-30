@@ -2,7 +2,7 @@
 # certifiacte is a combination of public key and private key.
 
 resource "aws_acm_certificate" "main" {
-  domain_name       = "www.your-new-domain.com"
+  domain_name       = "www.goodstuff.cloud"
   validation_method = "DNS"
 
   tags = {
