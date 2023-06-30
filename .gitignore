@@ -1,5 +1,18 @@
+.terraform/*
+.terraform.lock.hcl
 terraform.tfstate
 terraform.tfstate.backup
-.terraform.lock.hcl
-.terraform/*
+.terraform.tfstate.lock.info
+
+level1/.terraform/
+level2/.terraform/
+
+main.pem
+
+# modules
+/asg/.terraform/
+/lb/.terraform/
+/vpc/.terraform/
+.terraform/
+pickup.txt
 
