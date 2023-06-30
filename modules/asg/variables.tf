@@ -11,3 +11,6 @@ variable "target_group_arn" {}
 variable "ami_id" {}
 
 variable "user_data" {}
+
+variable "terraform" {}
+

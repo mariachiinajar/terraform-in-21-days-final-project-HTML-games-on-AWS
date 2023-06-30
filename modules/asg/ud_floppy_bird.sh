@@ -2,6 +2,7 @@
 
 yum update -y 
 yum install -y httpd git
-echo "Hello from $(hostname)" > /var/www/html/index.html
+git clone https://github.com/nebez/floppybird.git
+cp -R floppybird/* /var/www/html
 systemctl start httpd && systemctl enable httpd
 

@@ -20,6 +20,8 @@ resource "aws_security_group" "private" {
 
   tags = {
     Name = "${var.env_code}-private"
+    environment = var.env_code
+    terraform = var.terraform
   }
 }
 
@@ -28,7 +30,7 @@ resource "aws_launch_configuration" "main" {
   image_id             = var.ami_id
   instance_type        = "t3.micro"
   security_groups      = [aws_security_group.private.id]
-  user_data            = file("${path.module}/{var.user_data}.sh")
+  user_data            = file("${path.module}/${var.user_data}.sh")
   iam_instance_profile = aws_iam_instance_profile.main.name
 }
 
